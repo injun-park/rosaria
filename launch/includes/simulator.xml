@@ -1,0 +1,9 @@
+<launch>
+	<!--param name ="/use_sim_time" value="true"/-->
+	<!--node name="MobileSim" pkg="rosaria" type="mobilesim.sh" args=""/-->
+	<node name="rosaria" pkg="rosaria" type="RosAria" args="" output="screen">
+		<param name="publish_aria_lasers" value="true"/>
+		<remap from="/rosaria/sim_lms2xx_1_laserscan" to="scan"/>
+		<remap from="/rosaria/cmd_vel" to="/cmd_vel"/>
+	</node>
+</launch>

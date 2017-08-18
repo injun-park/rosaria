@@ -1,0 +1,10 @@
+<launch>
+
+	<node name="rosaria" pkg="rosaria" type="RosAria" output="screen">
+
+		<remap from="/rosaria/cmd_vel" to="cmd_vel"/>
+		<remap from="/rosaria/pose" to="odom"/>
+		<remap from="/rosaria/sim_lms2xx_1_laserscan" to="scan"/>
+	</node>
+
+</launch>

@@ -1,0 +1,18 @@
+<launch>
+
+	<node name="rosaria" pkg="rosaria" type="RosAria" output="screen" args="lp /dev/ttyUSB0">
+		<param name="publish_aria_lasers" value="true"/>
+		<param name="port" value="/dev/ttyUSB1"/>
+		<remap from="/rosaria/battery_recharge_state" to="/battery_recharge_state"/>
+		<remap from="/rosaria/battery_state_of_charge" to="/battery_charge_of_state"/>
+		<remap from="/rosaria/battery_voltage" to="/battery_voltage"/>
+		<remap from="/rosaria/bumper_state" to="/bumper_state"/>
+		<remap from="/rosaria/cmd_vel" to="/cmd_vel"/>
+		<remap from="/rosaria/lms2xx_1_laserscan" to="/scan"/>
+		<remap from="/rosaria/sim_lms2xx_1_laserscan" to="/scan"/>
+		<remap from="/rosaria/motors_state" to="/motor_state"/>
+		<remap from="/rosaria/pose" to="/odom"/>
+		<remap from="/rosaria/sonar" to="/sonar"/>
+		<remap from="/rosaria/sonar_pointcloud2" to="/sonar_pointcloud2"/>
+	</node>
+</launch>
