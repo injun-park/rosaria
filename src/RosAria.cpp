@@ -462,6 +462,7 @@ int RosAriaNode::Setup()
   
   dynamic_reconfigure_server->setConfigDefault(dynConf_default);
   
+
   dynamic_reconfigure_server->setCallback(boost::bind(&RosAriaNode::dynamic_reconfigureCB, this, _1, _2));
 
 
