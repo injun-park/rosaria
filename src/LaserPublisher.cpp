@@ -58,6 +58,7 @@ LaserPublisher::LaserPublisher(ArLaser *_l, ros::NodeHandle& _n, bool _broadcast
   laserscan.header.frame_id = "laser_frame";
 
   // ijpark modified
+    // laser publisher TF setting fixed
   laserscan.angle_min = ArMath::degToRad(-90.0);
   laserscan.angle_max = ArMath::degToRad(90.0);
 
