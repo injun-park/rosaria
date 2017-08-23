@@ -56,14 +56,10 @@ LaserPublisher::LaserPublisher(ArLaser *_l, ros::NodeHandle& _n, bool _broadcast
   
 
   laserscan.header.frame_id = "laser_frame";
-//  laserscan.angle_min = ArMath::degToRad(laser->getStartDegrees());
-//  laserscan.angle_max = ArMath::degToRad(laser->getEndDegrees());
 
   // ijpark modified
   laserscan.angle_min = ArMath::degToRad(-90.0);
   laserscan.angle_max = ArMath::degToRad(90.0);
-
-
 
   //laserscan.time_increment = ?
   laserscan.range_min = 0; //laser->getMinRange() / 1000.0;
